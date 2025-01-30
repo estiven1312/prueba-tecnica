@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the AnimalPrinter bean -->
+    <bean id="animalPrinter" class="pe.com.dev.util.AnimalPrinter" />
+
+    <!-- Define the AnimalService bean with a constructor argument -->
+    <bean id="animalService" class="pe.com.dev.service.implement.AnimalServiceImpl">
+        <constructor-arg ref="animalPrinter" />
+    </bean>
+</beans>
